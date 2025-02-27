@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - D&D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- MENÚ PRINCIPAL -->
+    <div class="menu-container" id="mainMenu">
+        <h1>⚔️ Dungeons & Dragons ⚔️</h1>
+        <button onclick="startGame()">Jugar</button>
+        <button onclick="showMenu('settings')">Configuración</button>
+        <button onclick="showMenu('credits')">Créditos</button>
+        <button onclick="exitGame()">Salir</button>
+    </div>
+
+    <!-- CONFIGURACIÓN -->
+    <div class="submenu" id="settings">
+        <h2>Configuración</h2>
+        <label>Sonido: <input type="range" min="0" max="100" value="50"></label>
+        <label>Pantalla: 
+            <select>
+                <option>Ventana</option>
+                <option>Completa</option>
+            </select>
+        </label>
+        <label>Gráficos: 
+            <select>
+                <option>Bajos</option>
+                <option>Medios</option>
+                <option>Altos</option>
+            </select>
+        </label>
+        <label>Micrófono: <input type="checkbox"></label>
+        <button onclick="goBack()">Volver</button>
+    </div>
+
+    <!-- CRÉDITOS -->
+    <div class="submenu" id="credits">
+        <h2>Créditos</h2>
+        <div class="credits-list" id="creditsList">
+            <p>Kevin (Programador)</p>
+            <p>Juanse (Diseñador)</p>
+        </div>
+        <button onclick="goBack()">Volver</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
